@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Poppins-SemiBold", sans-serif;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
 body {
   background-color: rgb(32, 32, 48);
   display: flex;
@@ -5,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  font-family: 'Poppins-SemiBold', sans-serif;
 }
 
 #intro {
@@ -20,15 +26,40 @@ body {
   }
 
   p+p {
-    margin-bottom: -4px;
+    margin-top: 0px;
     /*outline: 1px solid white;*/
   }
 
   a {
     text-decoration: none;
     color: rgb(132, 188, 156);
+    font-weight: 900;
   }
+}
 
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 2px 2px 5px 2px black;
+  border-radius: 10px;
+  width: 40vw;
+  height: 60px;
+
+  .game-picker {
+    color: rgb(255, 253, 247);
+    font-size: 20px;
+    font-weight: 900;
+    background: rgb(56, 111, 164);
+    padding: 5px;
+    border-radius: 10px;
+    flex-basis: 150px;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .breakout-setup {
