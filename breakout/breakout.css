@@ -23,6 +23,7 @@ body {
   box-shadow: 0 0 10px rgb(32, 32, 48);
   padding: 20px;
   margin-top: 20px;
+  touch-action: none;
 }
 
 @media (max-width: 1024px) {
