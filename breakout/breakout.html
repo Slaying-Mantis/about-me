@@ -3,9 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Breakout</title>
+  <link rel="stylesheet" href="./breakout.css" />
 </head>
 <body>
-  <h1 style="text-align: center;font-size: 50px;">Breakout!</h1>
+  <div class="game-setup">
+    <div class="game-options">
+      <a class="button home" href="/index.html">
+        <img src="/icons/home.svg" />
+        <div>Home</div>
+      </a>
+      <button class="button reload">
+        <img src="/icons/refresh-ccw.svg" />
+      </button>
+      <div class="score">
+        <p id="board">Score:</p>
+        <p id="points">0</p>
+      </div>
+    </div>
+    <div class="game-area">
+      <div class="ball"></div>
+      <div class="paddle"></div>
+      <div id="block_space">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+    </div>
+    <button class="button play">Play</button>
+  </div>
+
+  <script src="./breakout.js"></script>
 </body>
 </html>

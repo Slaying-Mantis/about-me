@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Poppins-SemiBold", sans-serif;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+body {
+  background: rgb(124, 128, 155);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.game-setup {
+  background: rgb(32, 32, 48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(32, 32, 48);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .game-setup {
+    width: 80vmin;
+  }
+}
+
+.game-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vmin;
+  height: 5vh;
+  border-radius: 5px;
+
+  .button.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: auto;
+    text-decoration: none;
+
+    img {
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
+      height: 19px;
+    }
+    div {
+      color: rgb(255, 253, 247);
+      font-family: "Poppins-SemiBold", sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+  }
+
+  .button.reload {
+    img {
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
+      height: 20px;
+    }
+  }
+
+  .score {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 20%;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 0.8rem;
+    color: white;
+    border: 2px solid white;
+    padding: 0px 5px 0px 5px;
+  }
+
+  #board {
+    font-weight: 600;
+  }
+}
+
+.game-over {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(32, 32, 48);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(32, 32, 48);
+  width: 30vmin;
+  height: 10vmin;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  transform: translateX(-50%) translateY(-50%);
+
+  p {
+    color: rgb(255, 253, 247);
+    font-size: 15px;
+  }
+}
+
+.game-area {
+  background: black;
+  height: 80vmin;
+  width: 80vmin;
+  border: 2px solid white;
+  display: flex;
+  position: relative;
+
+  .ball {
+    position: absolute;
+    background: white;
+    height: 4%;
+    width: 4%;
+    left: 50%;
+    top: 92%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 100%;
+  }
+
+  .paddle {
+    position: absolute;
+    background: white;
+    width: 20%;
+    height: 3%;
+    border-radius: 25px;
+    left: 50%;
+    top: 97%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  #block_space {
+    display: grid;
+    position: absolute;
+    left: 0.5%;
+    top: 15%;
+    width: 99%;
+    height: 50%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 10%);
+
+    .block {
+      height: auto;
+
+      &:nth-child(1), &:nth-child(2),
+      &:nth-child(3), &:nth-child(4),
+      &:nth-child(5), &:nth-child(6),
+      &:nth-child(7), &:nth-child(8) {
+        background: hsl(0, 100%, 40%);
+      }
+      &:nth-child(9), &:nth-child(10),
+      &:nth-child(11), &:nth-child(12),
+      &:nth-child(13), &:nth-child(14),
+      &:nth-child(15), &:nth-child(16) {
+        background: hsl(30, 100%, 40%);
+      }
+      &:nth-child(17), &:nth-child(18),
+      &:nth-child(19), &:nth-child(20),
+      &:nth-child(21), &:nth-child(22),
+      &:nth-child(23), &:nth-child(24) {
+        background: hsl(60, 100%, 40%);
+      }
+      &:nth-child(25), &:nth-child(26),
+      &:nth-child(27), &:nth-child(28),
+      &:nth-child(29), &:nth-child(30),
+      &:nth-child(31), &:nth-child(32) {
+        background: hsl(120, 100%, 40%);
+      }
+      &:nth-child(33), &:nth-child(34),
+      &:nth-child(35), &:nth-child(36),
+      &:nth-child(37), &:nth-child(38),
+      &:nth-child(39), &:nth-child(40) {
+        background: hsl(240, 100%, 40%);
+      }
+
+    }
+
+  }
+}
+
+.button {
+  background: rgb(124, 128, 155);
+  padding: 10px;
+  border: 1px solid rgb(124, 128, 155);
+  border-radius: 10px;
+  transition: transform 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }    
+}
+
+.button.play {
+  color: rgb(255, 253, 247);
+  font-size: 20px;
+  font-weight: 800;
+  background: rgb(124, 128, 155);
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(124, 128, 155);
+  width: 150px;
+  text-align: center;
+}

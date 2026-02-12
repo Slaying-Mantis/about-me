@@ -4,53 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Steps</title>
-    <link rel="stylesheet" href="./vibes.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div id="intro">
-      <h1>⚠️Work In Progress! Come back later!⚠️</h1>
+      <h1>Hello, there!</h1>
       <p>
-        Welcome to my first ever webpage! This has been a blast for me to build!
+        Welcome to my first ever webpage!
       </p>
       <p>
-        My coding journey started in Jan 2025 when through a bootcamp by
-        <a href="https://exercism.org">Exercism.org</a>.
+        I am Slaying-Mantis and my coding journey began in January 2025 when I came across <a href="http://exercism.org">Exercism.org's</a> Coding Fundamentals Bootcamp. 
+        I decided to take a leap of faith and enroll, unsure if I was going to be stuck in another beginner tutorial hell. 
       </p>
+      <p>
+        It turned to be a wonderfully-crafted learning experience with a vibrant community that was more than happy to welcome absolute beginners like myself. 
+        Within a few weeks, I realized I was having so much fun learning the fundamentals of coding, I became addicted. 
+        The rest is history.
+      </p>
+      <p>
+        Below are some of the games that I learned how to develop through my journey in the bootcamp. 
+        So far, I've got one game, Breakout, running upto a reasonable level of functionality.
+        I aim to add further features, like Highscores, advanced levels, etc., as I grow in my programming capabilities. 
+        More games, like Snake, will also be added as time permits. 
+      </p>
+      <p>Hope you fun playing! I had a blast building them!</p>
+      <p>P.S. There maybe some bugs. They will be dealt with in future updates!</p>
     </div>
     <div class="navigation">
-      <a class="game-picker" href="./breakout/breakout.html">Breakout</a>
-      <a class="game-picker">Snake</a>
+      <a class="game-picker" id="breakoutBtn" href="./breakout/breakout.html">Breakout</a>
+      <a class="game-picker" id="snakeBtn">Snake <span>(Coming Soon)</span></a>
     </div>
-    <div class="game-setup">
-      <div class="game-parameters">
-        <button class="play-button">Play</button>
-      </div>
-      <div class="game-area">
-        <div class="ball"></div>
-        <div class="paddle"></div>
-        <div id="block_space">
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-        </div>
-      </div>
-    </div>
+    
 
-    <script src="./ball.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
